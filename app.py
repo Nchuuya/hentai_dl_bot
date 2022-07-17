@@ -31,7 +31,7 @@ def main():
     bot.add_handler(CallbackQueryHandler(hentaidl, filters.regex('dlt_*')), group=5)
     bot.add_handler(CallbackQueryHandler(infohentai, filters.regex('info_*')), group=2)
     bot.add_handler(CallbackQueryHandler(hentailink, filters.regex('link_*')), group=6)
-    bot.add_handler(MessageHandler(start , filters.regex(r'start')), group=13)
+    bot.add_handler(MessageHandler(start , filters.regex(r'sttart')), group=13)
 
 
 if __name__ == '__main__':
