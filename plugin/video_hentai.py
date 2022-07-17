@@ -7,7 +7,6 @@ import subprocess
 import json
 
 MONGO_URL = os.environ.get("MONGO_URL", None) 
-CACHE_CHANNEL = os.environ.get(int("-1001584010815"))
 
 def hentailink(client, callback_query):
     click = callback_query.data
@@ -69,7 +68,7 @@ def hentaidl(client, callback_query):
             callback_query.edit_message_text("""Uploading Now""", parse_mode="markdown")              
             K = client.send_document(chat_id=chatid, document=f'{link}.mp4', caption=f"""Download By @hanime_dl_bot""", parse_mode="markdown")   
             file_id = K.document.file_id
-            client.send_document(chat_id=CACHE_CHANNEL, document=file_id, caption=f"""Download By @hanime_dl_bot""", parse_mode="markdown")                               
+            client.send_document(chat_id=-1001584010815, document=file_id, caption=f"""Download By @hanime_dl_bot""", parse_mode="markdown")                               
             hentai.insert_one({"name": link, "file_id": file_id})
             os.remove(file1)
         if url == "":     
