@@ -6,7 +6,7 @@ from pyrogram.handlers import *
 from plugin.search_hentai import hentaisearch
 from plugin.info_hentai import infohentai
 from plugin.video_hentai import hentailink, hentaidl
-from plugin.start import start
+from plugin.start import hwatch
 import os
 import re
 
